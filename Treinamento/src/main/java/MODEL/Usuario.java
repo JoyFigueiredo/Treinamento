@@ -1,10 +1,18 @@
 package MODEL;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Table;
+
 /**
  *
  * @author Joice
  */
+@Entity
+//@Table(name = "tbl_usuario")
 public class Usuario {
+    
+    private int id;
     private String nome;
     private String email;
 

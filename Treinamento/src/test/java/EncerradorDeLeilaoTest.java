@@ -74,10 +74,10 @@ public class EncerradorDeLeilaoTest {
                 .atualiza(leilao1);
         EnviadorDeEmail carteiroFalso
                 = mock(EnviadorDeEmail.class);
-        EncerradorDeLeilao encerrador
-                = new EncerradorDeLeilao(daoFalso, carteiroFalso);
-        encerrador.encerra();
+//        EncerradorDeLeilao encerrador
+//                = new EncerradorDeLeilao(daoFalso, carteiroFalso);
+//        encerrador.encerra();
         verify(daoFalso).atualiza(leilao2);
-        verify(carteiroFalso).envia(leilao2);
+//        verify(carteiroFalso).envia(leilao2);
     }
 }
