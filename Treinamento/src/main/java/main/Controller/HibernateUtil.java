@@ -59,8 +59,4 @@ public class HibernateUtil {
             StandardServiceRegistryBuilder.destroy(registry);
         }
     }
-
-    public static Session getSession() {
-        return getSessionFactory().openSession();
-    }
 }

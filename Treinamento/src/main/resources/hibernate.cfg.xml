@@ -46,9 +46,14 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:derby://localhost:1527/Leilao</property>
     <property name="hibernate.connection.username">joice</property>
     <property name="hibernate.connection.password">123</property>
+       
+    <property name = "hibernate.hbm2ddl.auto">update</property>
     
-        <property name= "show_sql">true</property>
+        <property name = "hibernate.show_sql">true</property>
+        <property name = "hibernate.format_sql">true</property>        
     
     <property name = "hibernate.id.new_generator_mappings">false</property>
+    
+    
   </session-factory>
 </hibernate-configuration>

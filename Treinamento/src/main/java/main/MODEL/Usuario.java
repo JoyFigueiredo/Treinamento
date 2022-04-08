@@ -11,17 +11,17 @@ import javax.persistence.Table;
  *
  * @author Joice
  */
-//@Entity
-//@Table(name = "tbl_usuario")
-public class Usuario {
+@Entity
+@Table(name = "tbl_usuario")
+public class Usuario  {
     
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column
-//    private int idUsuario;
-//    @Column
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
+    private int idUsuario;
+    @Column
     private String nome;
-//    @Column
+    @Column
     private String email;
 
     public Usuario(String nome) {
@@ -48,7 +48,7 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
-/*
+
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -56,5 +56,4 @@ public class Usuario {
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
- */   
 }

@@ -13,7 +13,7 @@ public class CriadorDeSessao {
     Session session = null;
 
     public CriadorDeSessao() {
-        session = HibernateUtil.getSession();
+        session = HibernateUtil.getSessionFactory().openSession();
 
         try {
             session.beginTransaction();
