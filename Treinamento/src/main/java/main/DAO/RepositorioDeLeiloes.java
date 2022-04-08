@@ -1,6 +1,6 @@
-package DAO;
+package main.DAO;
 
-import MODEL.Leilao;
+import main.MODEL.Leilao;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,8 +8,7 @@ import java.util.List;
  *
  * @author Joice
  */
-public class LeilaoDao {
-
+public class RepositorioDeLeiloes {
     private static List<Leilao> leiloes = new ArrayList<Leilao>();
 
     public void salva(Leilao leilao) {
@@ -38,5 +37,4 @@ public class LeilaoDao {
 
     public void atualiza(Leilao leilao) {
         /* faz nada! */ }
-
 }

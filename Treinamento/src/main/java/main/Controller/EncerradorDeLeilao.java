@@ -1,8 +1,9 @@
-package Controller;
+package main.Controller;
 
-import DAO.LeilaoDao;
-import MODEL.Carteiro;
-import MODEL.Leilao;
+import main.DAO.RepositorioDeLeiloes;
+import main.DAO.LeilaoDao;
+import main.MODEL.Carteiro;
+import main.MODEL.Leilao;
 import java.util.Calendar;
 import java.util.List;
 

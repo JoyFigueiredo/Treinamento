@@ -1,8 +1,8 @@
-package Controller;
+package main.Controller;
 
-import MODEL.Lance;
-import MODEL.Leilao;
-import MODEL.Usuario;
+import main.MODEL.Lance;
+import main.MODEL.Leilao;
+import main.MODEL.Usuario;
 import java.util.Calendar;
 
 /**

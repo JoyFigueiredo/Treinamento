@@ -1,19 +1,27 @@
-package MODEL;
+package main.MODEL;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
  *
  * @author Joice
  */
-@Entity
+//@Entity
 //@Table(name = "tbl_usuario")
 public class Usuario {
     
-    private int id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column
+//    private int idUsuario;
+//    @Column
     private String nome;
+//    @Column
     private String email;
 
     public Usuario(String nome) {
@@ -40,5 +48,13 @@ public class Usuario {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+/*
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+ */   
 }

@@ -1,6 +1,6 @@
-package DAO;
+package main.DAO;
 
-import MODEL.Leilao;
+import main.MODEL.Leilao;
 import java.util.ArrayList;
 import java.util.List;
 

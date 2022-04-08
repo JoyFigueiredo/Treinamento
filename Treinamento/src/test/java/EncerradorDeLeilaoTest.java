@@ -1,13 +1,12 @@
 
-import Controller.CriadorDeLeilao;
-import Controller.EncerradorDeLeilao;
-import Controller.EnviadorDeEmail;
-import Controller.RepositorioDeLeiloes;
-import DAO.LeilaoDao;
-import MODEL.Leilao;
+import main.Controller.CriadorDeLeilao;
+import main.Controller.EncerradorDeLeilao;
+import main.DAO.RepositorioDeLeiloes;
+import main.MODEL.Leilao;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
+import main.MODEL.Carteiro;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
@@ -70,14 +69,18 @@ public class EncerradorDeLeilaoTest {
                 = mock(RepositorioDeLeiloes.class);
         when(daoFalso.correntes())
                 .thenReturn(Arrays.asList(leilao1, leilao2));
+
         doThrow(new RuntimeException()).when(daoFalso)
                 .atualiza(leilao1);
-        EnviadorDeEmail carteiroFalso
-                = mock(EnviadorDeEmail.class);
-//        EncerradorDeLeilao encerrador
-//                = new EncerradorDeLeilao(daoFalso, carteiroFalso);
-//        encerrador.encerra();
+
+        Carteiro carteiroFalso
+                = mock(Carteiro.class);
+        EncerradorDeLeilao encerrador
+                = new EncerradorDeLeilao(daoFalso, carteiroFalso);
+
+        encerrador.encerra();
         verify(daoFalso).atualiza(leilao2);
-//        verify(carteiroFalso).envia(leilao2);
+        verify(carteiroFalso).envia(leilao2);
+
     }
 }

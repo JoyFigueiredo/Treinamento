@@ -1,18 +1,33 @@
-package MODEL;
+package main.MODEL;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author Joice
  */
+@Entity
+@Table(name = "tbl_Avaliador")
 public class Avaliador {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
+    private int idAvaliador;
+    @Column
     private double maiorDeTodos = Double.NEGATIVE_INFINITY;
+    @Column
     private double menorDeTodos = Double.POSITIVE_INFINITY;
+    @Column
     private List<Lance> maiores;
 
     public void avalia(Leilao leilao) {
@@ -46,7 +61,7 @@ public class Avaliador {
                 return 0;
             }
         });
-        maiores = maiores.subList(0,maiores.size() > 3 ? 3 : maiores.size());
+        maiores = maiores.subList(0, maiores.size() > 3 ? 3 : maiores.size());
 
     }
 

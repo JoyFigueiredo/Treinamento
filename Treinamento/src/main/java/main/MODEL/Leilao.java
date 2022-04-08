@@ -1,19 +1,35 @@
-package MODEL;
+package main.MODEL;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author Joice
  */
+@Entity
+@Table(name = "tbl_Leilao")
 public class Leilao {
-
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
+    private int idLeilao;
+    @Column
     private String descricao;
+    @Column
     private List<Lance> lances;
+    @Column
     private Calendar data;
+    @Column
     private boolean encerrado; 
 
     public Leilao(String descricao) {
@@ -72,5 +88,13 @@ public class Leilao {
 
     public void encerra() {
         this.encerrado = true;
+    }
+
+    public int getIdLeilao() {
+        return idLeilao;
+    }
+
+    public void setIdLeilao(int idLeilao) {
+        this.idLeilao = idLeilao;
     }
 }

@@ -1,9 +1,9 @@
 
-import Controller.CriadorDeLeilao;
-import MODEL.Avaliador;
-import MODEL.Lance;
-import MODEL.Leilao;
-import MODEL.Usuario;
+import main.Controller.CriadorDeLeilao;
+import main.MODEL.Avaliador;
+import main.MODEL.Lance;
+import main.MODEL.Leilao;
+import main.MODEL.Usuario;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;

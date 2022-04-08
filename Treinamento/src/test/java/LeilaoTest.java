@@ -1,7 +1,7 @@
 
-import MODEL.Lance;
-import MODEL.Leilao;
-import MODEL.Usuario;
+import main.MODEL.Lance;
+import main.MODEL.Leilao;
+import main.MODEL.Usuario;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//hibernate/Hibernate Configuration DTD 3.0//EN" >
- 
-<hibernate-configuration>
-    <sessio-factory>
-        <property name="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</property>
-        <property></property>
-    </sessio-factory>
-</hibernate-configuration>

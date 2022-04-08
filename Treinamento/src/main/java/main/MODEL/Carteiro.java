@@ -1,4 +1,4 @@
-package MODEL;
+package main.MODEL;
 
 /**
  *
