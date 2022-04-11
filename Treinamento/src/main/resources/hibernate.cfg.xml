@@ -54,6 +54,6 @@ Contributor(s):
     
     <property name = "hibernate.id.new_generator_mappings">false</property>
     
-    
+    <class-cache></class-cache>
   </session-factory>
 </hibernate-configuration>

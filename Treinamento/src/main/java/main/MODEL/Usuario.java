@@ -13,16 +13,16 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "tbl_usuario")
-public class Usuario  {
-    
+public class Usuario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private int idUsuario;
+    int idUsuario;
     @Column
-    private String nome;
+    String nome;
     @Column
-    private String email;
+    String email;
 
     public Usuario(String nome) {
         this.nome = nome;

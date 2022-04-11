@@ -11,19 +11,18 @@ import javax.persistence.Table;
  *
  * @author Joice
  */
-
 @Entity
 @Table(name = "tbl_Lance")
 public class Lance {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private int idLance;
+    int idLance;
     @Column
-    private Usuario usuario;
+    Usuario usuario;
     @Column
-    private double valor;
+    double valor;
 
     public int getIdLance() {
         return idLance;
@@ -33,8 +32,6 @@ public class Lance {
         this.idLance = idLance;
     }
 
-    
-    
     public Lance(Usuario usuario, double valor) {
         this.usuario = usuario;
         this.valor = valor;
@@ -56,5 +53,4 @@ public class Lance {
         this.valor = valor;
     }
 
-   
 }

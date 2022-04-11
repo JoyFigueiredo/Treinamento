@@ -31,10 +31,17 @@ public class Leilao {
     private Calendar data;
     @Column
     private boolean encerrado; 
-
+    
     public Leilao(String descricao) {
         this.descricao = descricao;
         this.lances = new ArrayList<Lance>();
+    }
+
+    public Leilao(String descricao, double d, Usuario usuario, boolean b) {
+        this.descricao = descricao;
+        this.lances.get(idLeilao).setValor(d);
+        this.lances.get(idLeilao).setUsuario(usuario);
+        this.encerrado = b;
     }
 
     public void propoe(Lance lance) {
@@ -56,6 +63,10 @@ public class Leilao {
             }
         }
         return total;
+    }
+    
+    public Usuario getNome(){
+        return lances.get(idLeilao).getUsuario();
     }
 
     private Lance ultimoLanceDado() {
