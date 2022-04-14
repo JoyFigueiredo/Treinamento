@@ -22,6 +22,7 @@ public class CriadorDeSessao {
             Session session = Mockito.mock(Session.class);
             Query query = Mockito.mock(Query.class);
 */
+            //session = HibernateUtil.getFactory().getCurrentSession();
             session = HibernateUtil.getSessionFactory().openSession();
             trans = session.beginTransaction();
 
