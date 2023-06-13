@@ -23,7 +23,7 @@ public class Avaliador {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private int idAvaliador;
-    @Column
+    @Column /*da pra colocar quantidade */
     private double maiorDeTodos = Double.NEGATIVE_INFINITY;
     @Column
     private double menorDeTodos = Double.POSITIVE_INFINITY;
